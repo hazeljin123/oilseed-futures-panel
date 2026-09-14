@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>期货技术分析总览（主力合约） 2026-09-14</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; margin: 0; padding: 22px;
+        background: #f4f6f9; color: #1f2937; }
+  .wrap { max-width: 1280px; margin: 0 auto; }
+  header { background: linear-gradient(135deg,#123a5e,#1d6fa5); color: #fff; border-radius: 14px; padding: 20px 26px;
+           margin-bottom: 14px; }
+  header h1 { margin: 0 0 6px; font-size: 22px; }
+  header .meta { font-size: 12.5px; opacity: .9; line-height: 1.8; }
+  .card { background: #fff; border-radius: 12px; padding: 16px 18px; box-shadow: 0 1px 4px rgba(15,23,42,.06); }
+  .card h3 { margin: 0 0 8px; font-size: 16px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  th { background: #eef2f7; text-align: left; padding: 9px 10px; font-weight: 600; white-space: nowrap; }
+  td { padding: 8px 10px; border-bottom: 1px solid #eef2f7; }
+  tr:last-child td { border-bottom: none; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .code { color: #6b7280; font-size: 11.5px; font-weight: 400; }
+  .up { color: #d23c3c; } .down { color: #0a9d6e; } .flat { color: #6b7280; }
+  .tag { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; }
+  .t-up { background: #fde8e8; color: #b91c1c; } .t-down { background: #d7f3e8; color: #0a7a55; }
+  .t-flat { background: #eef0f3; color: #4b5563; }
+  .wind { white-space: nowrap; }
+  .foot { color: #6b7280; font-size: 12px; line-height: 1.9; padding: 10px 4px 30px; }
+  .err { color: #b91c1c; }
+  .note { margin: 0 0 8px; color: #6b7280; font-size: 12px; }
+  .hint { margin: 10px 0 0; color: #8a94a6; font-size: 12px; line-height: 1.8; }
+  @media (max-width: 900px) { body { padding: 10px; overflow-x: auto; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>📊 期货技术分析总览 · 主力合约与价差组合</h1>
+    <div class="meta">生成时间：2026-09-14 18:45:13 ｜ 品种：WTI原油、豆油、豆粕、鸡蛋、菜油、豆二、棕榈油、生猪、菜粕 ＋ 价差组合（跨品种/月间，覆盖 豆粕/菜粕/豆油/棕榈油/菜油 的 2701/2705/2609 合约）
+    <br>数据来源：天玑智能K线日线(国内8品种) ＋ 新浪财经外盘日线(WTI原油 NYMEX CL 主力连续) ＋ 新浪合约日线(价差两腿，逐日收盘价差) ＋ 天玑风向罗盘(国内，数据日 2026-09-11)</div>
+  </header>
+
+  <div class="card">
+    <h3>📋 全品种总览 <span style="font-size:12px;font-weight:400;color:#6b7280">（按综合多空强度降序：最偏多→最偏空）</span></h3>
+    <table>
+      <tr><th>品种</th><th class="num">收盘</th><th class="num">涨跌</th><th>趋势</th><th>信号</th>
+          <th class="num">最近支撑</th><th class="num">最近阻力</th><th>风向</th><th class="num">数据至</th></tr>
+      <tr><td><b>WTI原油</b> <span class="code">CL·NYMEX</span></td><td class="num">102.40</td><td class="num up">+2.41%</td><td><span class="tag t-up">多头</span></td><td><span class="tag t-down">谨慎偏空</span></td><td class="num">79.62</td><td class="num">103.47</td><td class="wind">-</td><td class="num">2026-09-14</td></tr><tr><td><b>豆油</b> <span class="code">Y·DCE</span></td><td class="num">9005.00</td><td class="num down">-0.23%</td><td><span class="tag t-up">偏多震荡</span></td><td><span class="tag t-down">谨慎偏空</span></td><td class="num">8973.67</td><td class="num">9127.67</td><td class="wind">偏多风向</td><td class="num">2026-09-14</td></tr><tr><td><b>豆粕</b> <span class="code">M·DCE</span></td><td class="num">3361.00</td><td class="num down">-1.21%</td><td><span class="tag t-up">偏多震荡</span></td><td><span class="tag t-down">谨慎偏空</span></td><td class="num">3360.67</td><td class="num">3441.33</td><td class="wind">中性风向</td><td class="num">2026-09-14</td></tr><tr><td><b>鸡蛋</b> <span class="code">JD·DCE</span></td><td class="num">3854.00</td><td class="num up">+0.65%</td><td><span class="tag t-flat">震荡</span></td><td><span class="tag t-flat">观望</span></td><td class="num">3798.33</td><td class="num">3875.67</td><td class="wind">中性风向</td><td class="num">2026-09-14</td></tr><tr><td><b>菜油</b> <span class="code">OI·CZCE</span></td><td class="num">10191.00</td><td class="num up">+0.18%</td><td><span class="tag t-flat">震荡</span></td><td><span class="tag t-flat">观望</span></td><td class="num">10086.33</td><td class="num">10292.00</td><td class="wind">中性风向</td><td class="num">2026-09-14</td></tr><tr><td><b>豆二</b> <span class="code">B·DCE</span></td><td class="num">4074.00</td><td class="num down">-1.19%</td><td><span class="tag t-flat">震荡</span></td><td><span class="tag t-down">谨慎偏空</span></td><td class="num">4063.00</td><td class="num">4181.00</td><td class="wind">中性风向</td><td class="num">2026-09-14</td></tr><tr><td><b>棕榈油</b> <span class="code">P·DCE</span></td><td class="num">10025.00</td><td class="num down">-0.10%</td><td><span class="tag t-flat">震荡</span></td><td><span class="tag t-down">谨慎偏空</span></td><td class="num">9956.67</td><td class="num">10190.67</td><td class="wind">中性风向</td><td class="num">2026-09-14</td></tr><tr><td><b>生猪</b> <span class="code">LH·DCE</span></td><td class="num">11475.00</td><td class="num up">+0.53%</td><td><span class="tag t-down">偏空震荡</span></td><td><span class="tag t-up">谨慎偏多</span></td><td class="num">11336.67</td><td class="num">11708.33</td><td class="wind">强空头风向</td><td class="num">2026-09-14</td></tr><tr><td><b>菜粕</b> <span class="code">RM·CZCE</span></td><td class="num">2283.00</td><td class="num down">-1.85%</td><td><span class="tag t-down">偏空震荡</span></td><td><span class="tag t-down">谨慎偏空</span></td><td class="num">2271.00</td><td class="num">2352.33</td><td class="wind">中性风向</td><td class="num">2026-09-14</td></tr>
+    </table>
+  </div>
+
+  
+  <div class="card">
+    <h3>🔗 跨品种价差技术分析（同合约月 01/05/09）</h3>
+    <p class="note">当前挂牌 01/05/09 = 2701/2705/2609（09 为临近交割月；2709 上市后将切换至 2709）</p>
+    <table>
+      <tr><th>价差组合</th><th class="num">最新价差</th><th class="num">较昨</th><th>趋势</th><th>信号</th>
+          <th class="num">最近支撑</th><th class="num">最近阻力</th><th class="num">数据至</th></tr>
+      <tr><td><b>豆粕-菜粕 01合约</b><br><span class="code">M2701-RM2701</span></td><td class="num">1038.00</td><td class="num down">-7.00</td><td><span class="tag t-up">上行</span></td><td><span class="tag t-down">谨慎看空价差</span></td><td class="num">862.00</td><td class="num">1055.58</td><td class="num">2026-09-14</td></tr><tr><td><b>豆粕-菜粕 05合约</b><br><span class="code">M2705-RM2705</span></td><td class="num">629.00</td><td class="num down">-9.00</td><td><span class="tag t-up">上行</span></td><td><span class="tag t-flat">观望</span></td><td class="num">551.00</td><td class="num">639.55</td><td class="num">2026-09-14</td></tr><tr><td><b>豆粕-菜粕 09合约</b><br><span class="code">M2609-RM2609</span></td><td class="num">925.00</td><td class="num down">-70.00</td><td><span class="tag t-up">上行</span></td><td><span class="tag t-flat">观望</span></td><td class="num">748.00</td><td class="num">954.45</td><td class="num">2026-09-14</td></tr><tr><td><b>豆油-棕榈油 01合约</b><br><span class="code">Y2701-P2701</span></td><td class="num">-1020.00</td><td class="num down">-11.00</td><td><span class="tag t-up">震荡偏上</span></td><td><span class="tag t-up">谨慎看多价差</span></td><td class="num">-1340.00</td><td class="num">-948.00</td><td class="num">2026-09-14</td></tr><tr><td><b>豆油-棕榈油 05合约</b><br><span class="code">Y2705-P2705</span></td><td class="num">-1667.00</td><td class="num down">-16.00</td><td><span class="tag t-flat">区间震荡</span></td><td><span class="tag t-flat">观望</span></td><td class="num">-1809.91</td><td class="num">-1277.00</td><td class="num">2026-09-14</td></tr><tr><td><b>豆油-棕榈油 09合约</b><br><span class="code">Y2609-P2609</span></td><td class="num">-320.00</td><td class="num up">+42.00</td><td><span class="tag t-up">上行</span></td><td><span class="tag t-up">谨慎看多价差</span></td><td class="num">-992.00</td><td class="num">-</td><td class="num">2026-09-14</td></tr><tr><td><b>棕榈油-菜油 01合约</b><br><span class="code">P2701-OI2701</span></td><td class="num">-166.00</td><td class="num down">-28.00</td><td><span class="tag t-down">震荡偏下</span></td><td><span class="tag t-flat">观望</span></td><td class="num">-323.00</td><td class="num">-119.00</td><td class="num">2026-09-14</td></tr><tr><td><b>棕榈油-菜油 05合约</b><br><span class="code">P2705-OI2705</span></td><td class="num">492.00</td><td class="num down">-11.00</td><td><span class="tag t-up">震荡偏上</span></td><td><span class="tag t-down">谨慎看空价差</span></td><td class="num">-261.00</td><td class="num">765.92</td><td class="num">2026-09-14</td></tr><tr><td><b>棕榈油-菜油 09合约</b><br><span class="code">P2609-OI2609</span></td><td class="num">-956.00</td><td class="num down">-78.00</td><td><span class="tag t-down">下行</span></td><td><span class="tag t-down">谨慎看空价差</span></td><td class="num">-1063.00</td><td class="num">-500.00</td><td class="num">2026-09-14</td></tr><tr><td><b>豆油-菜油 01合约</b><br><span class="code">Y2701-OI2701</span></td><td class="num">-1186.00</td><td class="num down">-39.00</td><td><span class="tag t-up">上行</span></td><td><span class="tag t-flat">观望</span></td><td class="num">-1559.00</td><td class="num">-1117.00</td><td class="num">2026-09-14</td></tr><tr><td><b>豆油-菜油 05合约</b><br><span class="code">Y2705-OI2705</span></td><td class="num">-1175.00</td><td class="num down">-27.00</td><td><span class="tag t-up">上行</span></td><td><span class="tag t-down">谨慎看空价差</span></td><td class="num">-1620.00</td><td class="num">-948.35</td><td class="num">2026-09-14</td></tr><tr><td><b>豆油-菜油 09合约</b><br><span class="code">Y2609-OI2609</span></td><td class="num">-1276.00</td><td class="num down">-36.00</td><td><span class="tag t-up">震荡偏上</span></td><td><span class="tag t-flat">观望</span></td><td class="num">-1992.00</td><td class="num">-1146.00</td><td class="num">2026-09-14</td></tr>
+    </table>
+    <p class="hint">趋势“上行/下行”表示价差走阔/收窄；信号以价差方向表述（看多价差=价差扩大、看空价差=价差收窄）。指标基于两腿合约逐日收盘价之差，MA/MACD/RSI/BOLL/支撑阻力为纯收盘价口径，不含盘中高低。</p>
+  </div>
+
+  
+  <div class="card">
+    <h3>📅 月间价差技术分析（1-5 / 5-9 / 9-1）</h3>
+    <p class="note">当前挂牌 01/05/09 = 2701/2705/2609（09 为临近交割月；2709 上市后将切换至 2709）</p>
+    <table>
+      <tr><th>价差组合</th><th class="num">最新价差</th><th class="num">较昨</th><th>趋势</th><th>信号</th>
+          <th class="num">最近支撑</th><th class="num">最近阻力</th><th class="num">数据至</th></tr>
+      <tr><td><b>豆粕 1-5价差</b><br><span class="code">M2701-M2705</span></td><td class="num">378.00</td><td class="num up">+5.00</td><td><span class="tag t-up">上行</span></td><td><span class="tag t-flat">观望</span></td><td class="num">293.00</td><td class="num">404.89</td><td class="num">2026-09-14</td></tr><tr><td><b>豆粕 5-9价差</b><br><span class="code">M2705-M2609</span></td><td class="num">-336.00</td><td class="num up">+11.00</td><td><span class="tag t-down">下行</span></td><td><span class="tag t-flat">观望</span></td><td class="num">-374.74</td><td class="num">-232.00</td><td class="num">2026-09-14</td></tr><tr><td><b>豆粕 9-1价差</b><br><span class="code">M2609-M2701</span></td><td class="num">-42.00</td><td class="num down">-16.00</td><td><span class="tag t-flat">区间震荡</span></td><td><span class="tag t-down">谨慎看空价差</span></td><td class="num">-50.00</td><td class="num">-13.00</td><td class="num">2026-09-14</td></tr><tr><td><b>豆油 1-5价差</b><br><span class="code">Y2701-Y2705</span></td><td class="num">170.00</td><td class="num up">+4.00</td><td><span class="tag t-down">震荡偏下</span></td><td><span class="tag t-up">谨慎看多价差</span></td><td class="num">164.00</td><td class="num">360.00</td><td class="num">2026-09-14</td></tr><tr><td><b>豆油 5-9价差</b><br><span class="code">Y2705-Y2609</span></td><td class="num">-365.00</td><td class="num down">-25.00</td><td><span class="tag t-down">震荡偏下</span></td><td><span class="tag t-down">谨慎看空价差</span></td><td class="num">-407.00</td><td class="num">-72.62</td><td class="num">2026-09-14</td></tr><tr><td><b>豆油 9-1价差</b><br><span class="code">Y2609-Y2701</span></td><td class="num">195.00</td><td class="num up">+21.00</td><td><span class="tag t-up">上行</span></td><td><span class="tag t-up">谨慎看多价差</span></td><td class="num">-37.00</td><td class="num">-</td><td class="num">2026-09-14</td></tr><tr><td><b>菜粕 1-5价差</b><br><span class="code">RM2701-RM2705</span></td><td class="num">-31.00</td><td class="num up">+3.00</td><td><span class="tag t-up">震荡偏上</span></td><td><span class="tag t-up">谨慎看多价差</span></td><td class="num">-53.00</td><td class="num">16.00</td><td class="num">2026-09-14</td></tr><tr><td><b>菜粕 5-9价差</b><br><span class="code">RM2705-RM2609</span></td><td class="num">-40.00</td><td class="num down">-77.00</td><td><span class="tag t-down">震荡偏下</span></td><td><span class="tag t-down">看空价差(强)</span></td><td class="num">-58.00</td><td class="num">9.00</td><td class="num">2026-09-14</td></tr><tr><td><b>菜粕 9-1价差</b><br><span class="code">RM2609-RM2701</span></td><td class="num">71.00</td><td class="num up">+68.00</td><td><span class="tag t-up">震荡偏上</span></td><td><span class="tag t-flat">观望</span></td><td class="num">40.00</td><td class="num">82.00</td><td class="num">2026-09-14</td></tr><tr><td><b>菜油 1-5价差</b><br><span class="code">OI2701-OI2705</span></td><td class="num">181.00</td><td class="num up">+16.00</td><td><span class="tag t-up">上行</span></td><td><span class="tag t-up">谨慎看多价差</span></td><td class="num">40.00</td><td class="num">212.00</td><td class="num">2026-09-14</td></tr><tr><td><b>菜油 5-9价差</b><br><span class="code">OI2705-OI2609</span></td><td class="num">-466.00</td><td class="num down">-34.00</td><td><span class="tag t-down">震荡偏下</span></td><td><span class="tag t-down">谨慎看空价差</span></td><td class="num">-594.00</td><td class="num">-172.00</td><td class="num">2026-09-14</td></tr><tr><td><b>菜油 9-1价差</b><br><span class="code">OI2609-OI2701</span></td><td class="num">285.00</td><td class="num up">+18.00</td><td><span class="tag t-up">震荡偏上</span></td><td><span class="tag t-up">谨慎看多价差</span></td><td class="num">72.00</td><td class="num">385.00</td><td class="num">2026-09-14</td></tr>
+    </table>
+    <p class="hint">趋势“上行/下行”表示价差走阔/收窄；信号以价差方向表述（看多价差=价差扩大、看空价差=价差收窄）。指标基于两腿合约逐日收盘价之差，MA/MACD/RSI/BOLL/支撑阻力为纯收盘价口径，不含盘中高低。</p>
+  </div>
+
+
+  <div class="foot">
+    ⚠️ <b>免责声明</b>：本面板由程序基于授权/公开接口数据与量化技术指标自动生成，支撑/阻力与买卖信号仅为技术面统计提示，
+    不构成任何投资建议或交易依据。行情具有时效性，请以交易所与期货公司实时行情为准。市场有风险，投资需谨慎。过往表现不预示未来收益。
+    <br>口径说明：① 全品种总览按“趋势/信号/风向”三维综合的多空强度评分降序排列（趋势权重最高），最偏多在前、最偏空在后，
+    随每日数据自动调整；出错品种沉底。② 风向为天玑风向罗盘文字表述
+    （风向分 ≥80 强多头、65~79 偏多、36~64 中性、21~35 偏空、≤20 强空头），外盘品种无罗盘数据故显示"-"；
+    ③ 国内K线为天玑智能K线(无复权)，WTI 当日 bar 为盘中实时滚动价、结算后才定型，如遇节假日/数据未更新则展示最近交易日数据；
+    ④ 价差口径：跨品种价差 = A品种同月合约 − B品种同月合约（如 M2701−RM2701）；月间价差 = 近月 − 远月
+    （如 豆粕1-5 = M2701−M2705、9-1 = M2609−M2701）。09 合约当前为 2609（临近交割月），2709 上市后将切换；
+    05/09 腿部分合约数据可能止于前一日（合约当日无成交），以各行"数据至"为准。
+  </div>
+</div>
+</body>
+</html>

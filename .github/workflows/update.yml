@@ -1,0 +1,68 @@
+name: daily-report
+
+# 每天北京时间 15:10 (UTC 07:10) 生成期货技术分析日报并发布到 GitHub Pages
+# 注意: GitHub 定时任务可能有数分钟级延迟; 也可在 Actions 页面手动 Run workflow
+on:
+  schedule:
+    - cron: "10 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-report
+  cancel-in-progress: false
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate daily report
+        working-directory: src
+        env:
+          HTFC_API_KEY: ${{ secrets.HTFC_API_KEY }}
+          HTFC_BASE_URL: ${{ secrets.HTFC_BASE_URL }}
+        run: python run_panel.py
+
+      - name: Validate output (at least 5 varieties OK)
+        working-directory: src
+        run: |
+          python - <<'EOF'
+          import json
+          d = json.load(open("panel-latest.json", encoding="utf-8"))
+          ok = sum(1 for v in d["varieties"] if not v.get("error"))
+          sp = d.get("spreads") or {}
+          sp_ok = 0
+          if isinstance(sp, dict) and not sp.get("error"):
+              sp_ok = sum(1 for r in (sp.get("cross", []) + sp.get("month", [])) if not r.get("error"))
+          print(f"varieties ok={ok}/9, spread rows ok={sp_ok}/24")
+          assert ok >= 5, "too few varieties succeeded, abort publish"
+          EOF
+
+      - name: Publish (index + archive + data)
+        run: |
+          cp src/panel-latest.html index.html
+          mkdir -p archive data
+          cp src/panel-20*.html archive/ 2>/dev/null || true
+          cp src/panel-20*.json data/ 2>/dev/null || true
+          cp src/panel-latest.json data/panel-latest.json
+          rm -f src/panel-20*.html src/panel-20*.json src/panel-latest.html src/panel-latest.json
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && echo "No changes to publish" && exit 0
+          git commit -m "daily report $(date -u -d '+8 hours' +%F)"
+          git push
